@@ -13,7 +13,6 @@ public class Controller {
     private Service service;
     public ConnectionService connectionService=new ConnectionService();
     String response;
-   // Converter converter;
 
 
     public Controller(Service service) {
