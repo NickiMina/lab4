@@ -21,22 +21,22 @@ public class Controller {
 
     @GetMapping("/conversion/{args}/txt")
     public String getTxt(@PathVariable String args){
-        response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
+        response=connectionService.getConnection(args,"json");//endpoint do poprzedniego zadania
         return service.toTxt(response);
     }
     @GetMapping("/conversion/{args}/json")
     public String getJson(@PathVariable String args){
-        response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
+        response=connectionService.getConnection(args,"json");
         return service.toJson(response);
     }
     @GetMapping("/conversion/{args}/csv")
     public String getCsv(@PathVariable String args){
-        response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
+        response=connectionService.getConnection(args,"json");
         return service.toCsv(response);
     }
     @GetMapping("/conversion/{args}/xml")
     public String getXml(@PathVariable String args){
-        response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
+        response=connectionService.getConnection(args,"json");
        return service.toXml(response);
     }
 }
