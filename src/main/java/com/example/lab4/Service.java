@@ -19,8 +19,8 @@ public class Service {
         Upper_letters,Lower_letters, Numbers, Special_characters
         %d,%d,%d,%d
         """;
-        return String.format(str,jsonObject.getString("upperLetters"),
-                jsonObject.getString("lowerLetters"),jsonObject.getString("numbers"),jsonObject.getString("specialCharacters"));
+        return String.format(str,jsonObject.getInt("upperLetters"),
+                jsonObject.getInt("lowerLetters"),jsonObject.getInt("numbers"),jsonObject.getInt("specialCharacters"));
     }
 
     public String toXml(String args) {
@@ -33,7 +33,7 @@ public class Service {
         <Special_characters>%d</Special_characters>,
         </Response>
         """;
-        return String.format(str,jsonObject.getString("upperLetters"),
-                jsonObject.getString("lowerLetters"),jsonObject.getString("numbers"),jsonObject.getString("specialCharacters"));
+        return String.format(str,jsonObject.getInt("upperLetters"),
+                jsonObject.getInt("lowerLetters"),jsonObject.getInt("numbers"),jsonObject.getInt("specialCharacters"));
     }
 }
