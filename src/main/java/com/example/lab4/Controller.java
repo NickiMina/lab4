@@ -20,27 +20,24 @@ public class Controller {
     @ResponseBody
     public String getTxt(@PathVariable String args,@PathVariable String type){
         response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
-        return converter.toTxt(args);
+        return service.toTxt(args);
     }
     @GetMapping("/conversion/{args}/json")
     @ResponseBody
     public String getJson(@PathVariable String args,@PathVariable String type){
         response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
-        //converter.toTxt(args);
-        return null;
+        return service.toJson(args);
     }
     @GetMapping("/conversion/{args}/csv")
     @ResponseBody
     public String getCsv(@PathVariable String args,@PathVariable String type){
         response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
-        //converter.toTxt(args);
-        return null;
+        return service.toCsv(args);
     }
     @GetMapping("/conversion/{args}/xml")
     @ResponseBody
     public String getXml(@PathVariable String args,@PathVariable String type){
         response=connectionService.getConnection(args,"json");//ednpoint do zadania 3
-       // converter.toTxt(args);
-        return null;
+       return service.toXml(args);
     }
 }
